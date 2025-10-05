@@ -1,24 +1,25 @@
 # 🕹️ Desafio: Escrevendo as Classes de Um Jogo
 
-## 🎯 Objetivo
+## 🎯 Sobre o Projeto
 
-Criar uma classe genérica que represente um **herói de uma aventura**, utilizando os conceitos de **variáveis, operadores, laços de repetição, estruturas de decisão, funções, classes e objetos**.
+Este projeto foi desenvolvido por mim como parte do desafio **“Escrevendo as Classes de Um Jogo”** da plataforma **DIO (Digital Innovation One)**.  
+O objetivo foi colocar em prática os conceitos de **Programação Orientada a Objetos em JavaScript**, criando uma classe que representa heróis de diferentes tipos, cada um com seu próprio estilo de ataque.
 
 ---
 
-## 🧙‍♂️ Estrutura da Classe
+## 🧙‍♂️ O Que Eu Fiz
 
-A classe deve conter as seguintes **propriedades**:
+Implementei uma classe chamada `tiposdeHeroi`, contendo as propriedades:
 
-- `nome`
-- `idade`
+- `nome`  
+- `idade`  
 - `tipo` (ex: guerreiro, mago, monge, ninja)
 
-E um **método** chamado `atacar`, que exibe uma mensagem personalizada de acordo com o tipo do herói.
+E um método chamado `atacar()`, que exibe uma mensagem personalizada de acordo com o tipo de herói e o ataque utilizado.
 
 ---
 
-## ⚔️ Regras do Ataque
+## ⚔️ Regras de Ataque
 
 | Tipo de Herói | Ataque Utilizado        |
 |----------------|--------------------------|
@@ -29,7 +30,21 @@ E um **método** chamado `atacar`, que exibe uma mensagem personalizada de acord
 
 ---
 
-## 🧩 Saída Esperada
+## 💻 Código que Desenvolvi
 
-O método `atacar()` deve exibir:
+```javascript
+class tiposdeHeroi {
+  constructor(nome, idade, tipo) {
+    this.nome = nome
+    this.idade = idade
+    this.tipo = tipo
+  }
 
+  atacar(ataque) {
+    this.ataque = ataque
+    console.log(`O ${this.tipo} atacou ${this.ataque}.`)
+  }
+}
+
+let heroi = new tiposdeHeroi("Bruno", "30", "Guerreiro")
+heroi.atacar("usando espada")
